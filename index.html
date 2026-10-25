@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#063d55">
+<meta name="description" content="Una carta, cinco razones y un océano de cariño. Un pequeño viaje por Fondo de Bikini, solo para Arenita.">
+<title>Arenita · Un océano para ti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Caveat:wght@500;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="stories entry-pending">
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+<symbol id="i-sound" viewBox="0 0 24 24"><path d="m11 5-6 4H2v6h3l6 4V5Z"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+<symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+<symbol id="i-flower" viewBox="0 0 100 100"><path d="M48 39C19 5 5 37 35 49 0 54 22 84 43 62 37 99 74 95 59 63 93 84 105 48 69 47 99 24 67 8 57 39 53 12 33 13 48 39Z"/><circle cx="52" cy="51" r="9"/></symbol>
+</svg>
+<section class="entry-screen dive-gift" id="entry" aria-label="Entrada a Fondo de Bikini">
+<div class="backdrop" aria-hidden="true"><video id="dive-video" src="media/primer-regalo.mp4" poster="media/primer-regalo.jpg" autoplay muted playsinline preload="auto"></video><video id="dive-loop" src="media/intro-loop.mp4" poster="media/intro-loop.jpg" muted playsinline loop preload="none" hidden></video></div>
+<p id="dive-status" class="sr-only" role="status">El viaje empieza bajo el mar.</p>
+<button class="underwater-message" id="enter-experience" type="button" aria-controls="story-stage" hidden><span class="envelope" aria-hidden="true">♡</span><span class="gift-kicker">ARENITA · ESTE OCÉANO ES PARA TI</span><span class="gift-heading">Bajo este mar<br>hay algo para ti.</span><span class="entry-description">Dos regalos, una carta y muchas cositas<br>que quiero compartir contigo.</span><span class="gift-open-label">Toca para empezar la experiencia <span aria-hidden="true">→</span></span><span class="entry-details">Con música ♫ · Explora tocando a ambos lados</span></button>
+<button class="entry-retry" id="retry-entry" type="button" hidden>Toca para reproducir la entrada ▷</button>
+<button class="video-replay" id="replay-dive" type="button" hidden>Volver a ver la entrada ↻</button>
+</section>
+<a class="skip" hidden href="#inicio">Ir al contenido</a>
+<header class="topbar" hidden inert>
+<nav class="story-progress" aria-label="Elegir una historia"></nav>
+<a href="#inicio" class="brand" aria-label="Para Arenita, inicio"><svg class="icon" aria-hidden="true"><use href="#i-flower"/></svg> UN OCÉANO PARA TI</a>
+<div class="tools">
+<button id="sound" class="tool" type="button" aria-label="Activar música" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-sound"/></svg><span id="sound-label">Música</span></button>
+<button id="fullscreen" class="tool" type="button" aria-label="Entrar en pantalla completa" hidden><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg></button>
+</div>
+</header>
+<main hidden inert id="story-stage" aria-label="Historias para Arenita">
+<section class="chapter hero is-active" id="inicio" aria-labelledby="hero-title" data-label="Una botella para ti">
+<div class="backdrop" aria-hidden="true"><video src="media/intro-loop.mp4" poster="media/intro-loop.jpg" muted playsinline loop preload="metadata"></video></div>
+<div class="hero-copy story-content">
+<p class="eyebrow">Desde Fondo de Bikini, con amor</p>
+<h1 id="hero-title">De todo el mar,<br>mi lugar favorito<span class="hand">eres tú, Arenita.</span></h1>
+<p class="body-copy">Hay cosas que no caben en un mensaje.<br>Así que te hice un pequeño mundo para contártelas.</p>
+<a class="pill" id="start-experience" href="#paseo">Descubrir tus regalos <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+<p class="hand hero-note">psst… apenas empieza nuestra aventura ♡</p><p class="start-hint">Toca a la derecha para seguir · a la izquierda para volver</p>
+</div>
+<div class="hero-caption"><span></span> Destino: tú<br>Profundidad: todo mi corazón</div>
+</section>
+
+
+<section class="chapter video-gift road-gift" id="paseo" aria-labelledby="road-title" data-label="Una aventura contigo">
+<div class="backdrop" aria-hidden="true"><video id="road-video" src="media/paseo.mp4" poster="media/paseo.jpg" muted playsinline loop preload="none"></video></div>
+<div class="video-caption story-content"><p class="eyebrow">Nuestra próxima aventura</p><h2 id="road-title">No importa el destino.<br><span class="hand accent">Si voy contigo.</span></h2><p class="body-copy">Por todos los caminos que nos quedan por recorrer, las risas en el trayecto y las aventuras que todavía no imaginamos.</p><button class="pill small-pill" id="road-surprise" type="button" aria-controls="adventure-panel" aria-expanded="false">Elegir nuestra próxima aventura ♡</button><div id="adventure-panel" class="adventure-panel" role="region" aria-label="Elegir nuestra aventura" data-no-navigation hidden><h3 id="adventure-title">¿Qué hacemos juntos?</h3><p class="choice-intro">Toca tu plan favorito y confírmalo aquí.</p><div class="adventure-options" role="group" aria-label="Elegir nuestro plan">
+<button type="button" class="adventure-option" data-plan="0" aria-pressed="false"><span aria-hidden="true">↝</span><strong>Paseo sin rumbo</strong><small>Nuestra música y algo rico en el camino.</small></button>
+<button type="button" class="adventure-option" data-plan="1" aria-pressed="false"><span aria-hidden="true">✧</span><strong>Tarde de pelis</strong><small>Una cobija y ninguna prisa.</small></button>
+<button type="button" class="adventure-option" data-plan="2" aria-pressed="false"><span aria-hidden="true">☀</span><strong>Ver el atardecer</strong><small>Quedarnos hasta la primera estrella.</small></button>
+<button type="button" class="adventure-option" data-plan="3" aria-pressed="false"><span aria-hidden="true">♡</span><strong>Explorar contigo</strong><small>Un lugar nuevo, de tu mano.</small></button>
+</div><div class="plan-selection" aria-live="polite" aria-atomic="true"><span class="choice-kicker">TU ELECCIÓN</span><strong id="plan-selected-title">Todavía no has elegido</strong><p id="plan-selected-description">Toca una opción de arriba para elegirla.</p></div><button class="surprise-choice" id="surprise-plan" type="button">No me decido, sorpréndeme ✧</button><button class="pill" id="confirm-plan" type="button" disabled>Confirmar nuestro plan ♡</button></div><div class="road-choice-card" id="road-choice-card" hidden><span class="choice-kicker">NUESTRO PLAN ELEGIDO ✓</span><strong id="road-chosen-title"></strong><p id="road-note" role="status"></p></div></div>
+</section>
+<section class="chapter reasons" id="razones" aria-labelledby="reasons-title" data-label="Cinco razones, de mil">
+
+<svg class="flower" aria-hidden="true"><use href="#i-flower"/></svg>
+<div class="reasons-layout story-content">
+<div><p class="eyebrow">Podría hacer una lista infinita</p><h2 id="reasons-title">Esas pequeñas<br>cosas <span class="hand">que te hacen tú.</span></h2><p class="body-copy">No es una sola razón. Son todos esos detalles tuyos que me hacen elegirte una y otra vez.</p></div>
+<div class="reason-book">
+<div class="reason-index"><span>RAZONES PARA QUERERTE</span><span id="reason-label">Tu risa</span></div>
+<div class="reason-content" id="reason-content" aria-live="polite" aria-atomic="true"><div class="reason-icon" id="reason-icon" aria-hidden="true">☀</div><h3 id="reason-title">Tu forma de iluminarlo todo.</h3><p id="reason-text">Tu risa tiene algo que no sé explicar. Me basta escucharla para que el día cambie de color y todo se sienta un poquito más ligero.</p></div>
+<button id="favorite-reason" class="favorite-reason" type="button" aria-pressed="false">Esta es mi favorita ♡</button><div class="reason-controls"><div class="reason-dots" role="group" aria-label="Elegir una razón">
+<button type="button" aria-label="tu risa" aria-pressed="true" data-reason="0"></button><button type="button" aria-label="tu valentía" aria-pressed="false" data-reason="1"></button><button type="button" aria-label="tus cuidados" aria-pressed="false" data-reason="2"></button><button type="button" aria-label="tu autenticidad" aria-pressed="false" data-reason="3"></button><button type="button" aria-label="tu compañía" aria-pressed="false" data-reason="4"></button>
+</div><button class="arrow-button" id="next-reason" type="button" aria-label="Ver la siguiente razón"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+</div></div>
+</section>
+
+<section class="chapter video-gift sunset-gift" id="atardecer" aria-labelledby="sunset-title" data-label="Un lugar para nosotros">
+<div class="backdrop" aria-hidden="true"><video id="sunset-video" src="media/atardecer.mp4" poster="media/atardecer.jpg" muted playsinline loop preload="none"></video></div>
+<div class="video-caption story-content"><p class="eyebrow">Nuestro rincón favorito</p><h2 id="sunset-title">El día se acaba.<br><span class="hand accent">Las ganas de ti, no.</span></h2><p class="body-copy">Quiero muchos atardeceres así: sin prisa, cerquita de ti y con la sensación de estar justo donde quiero estar.</p><button class="pill small-pill" id="save-sunset" type="button" aria-pressed="false">Guardar este atardecer ♡</button><p class="interactive-note" id="sunset-note" role="status">Un pequeño recuerdo de nuestro océano.</p></div>
+</section>
+<section class="chapter letter-section" id="carta" aria-labelledby="letter-title" data-label="Una carta desde el fondo">
+
+<div class="backdrop" aria-hidden="true"><video src="media/noche.mp4" poster="media/noche.jpg" muted playsinline loop preload="none"></video></div>
+<div class="letter-layout story-content"><div class="letter-intro"><p class="eyebrow">Una pausa, solo nosotros</p><h2 id="letter-title">Hay cosas que merecen una <span class="accent">carta.</span></h2><p class="hand">Léela despacito. No tenemos prisa.</p><button class="pill" id="read-letter" type="button" aria-haspopup="dialog" aria-controls="letter-dialog">Abrir mi carta <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div></div>
+</section>
+<section class="chapter wishes" id="contigo" aria-labelledby="wishes-title" data-label="Todo lo que quiero contigo">
+<div class="orbit" aria-hidden="true"></div>
+<div class="wishes-layout story-content"><div><p class="eyebrow">Nos queda todo un océano</p><h2 id="wishes-title">Mis planes<br>favoritos llevan<span class="hand">tu nombre.</span></h2><p class="body-copy">No hace falta ir muy lejos. Si es contigo, hasta el plan más pequeño puede ser una gran historia.</p></div>
+<ol class="wish-list">
+<li><span class="wish-mark" aria-hidden="true">♡</span><div><h3>Seguir haciendo tonterías.</h3><p>Inventar chistes que solo nosotros entendamos, reírnos por nada y no perder esa bonita costumbre de jugar.</p></div></li>
+<li><span class="wish-mark" aria-hidden="true">♡</span><div><h3>Ser tu lugar tranquilo.</h3><p>Escucharte al final de un día largo, celebrar lo que te ilusiona y acompañarte cuando las cosas pesen un poco más.</p></div></li>
+<li><span class="wish-mark" aria-hidden="true">♡</span><div><h3>Coleccionar días contigo.</h3><p>Una caminata, algo rico de comer, mirar el cielo. Llenar la vida de momentos sencillos a los que siempre queramos volver.</p></div></li>
+</ol></div>
+</section>
+<section class="chapter finale" id="siempre" aria-labelledby="final-title" data-label="Tú, en todos mis mares">
+
+<div class="backdrop" aria-hidden="true"><video src="media/medusas.mp4" poster="media/medusas.jpg" muted playsinline loop preload="none"></video></div>
+<div class="finale-heading story-content"><p class="eyebrow">Gracias por existir, Arenita</p><h2 id="final-title">Te amo.</h2><p class="subtitle">Más que a todas las medusas del mar.</p></div>
+<div class="finale-action story-content"><button class="pill" id="send-love" type="button"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg> Un poquito más de amor</button><p id="love-note" role="status">Este océano de cariño es todo tuyo.</p><button class="pill summary-launch" id="open-summary" type="button" aria-haspopup="dialog" aria-controls="summary-dialog">Crear nuestro recuerdo ↗</button><a class="restart" href="#inicio">Volver a nuestra primera ola ↑</a></div>
+</section>
+</main>
+<footer class="story-footer" hidden inert><div class="story-meta"><span id="chapter-label">Una botella para ti</span></div><div class="navigation-row"><button type="button" class="story-arrow" id="previous-story" aria-label="Historia anterior">←</button><span id="navigation-hint">IZQUIERDA: VOLVER · DERECHA: SEGUIR</span><button type="button" class="story-arrow" id="next-story" aria-label="Historia siguiente">→</button></div></footer>
+<div id="story-announcement" class="sr-only" role="status" aria-live="polite"></div>
+<dialog id="letter-dialog" aria-label="Una carta para Arenita"><div class="dialog-content"><button class="dialog-close" type="button" data-close aria-label="Cerrar carta">×</button><article class="letter" aria-label="Carta para Arenita">
+<div class="letter-top"><span>CORREO DE FONDO DE BIKINI</span><div class="stamp" aria-hidden="true">♡</div></div>
+<h3>Mi querida Arenita:</h3>
+<p>Hay noches tranquilas como esta en las que me dan ganas de detener el mundo un ratito y decirte lo mucho que significas para mí.</p>
+<p>Me encanta cómo te ríes, cómo me cuidas y cómo todo se vuelve más bonito cuando estás. Contigo, hasta un día cualquiera tiene algo que vale la pena recordar.</p>
+<p>No necesito que todos los días sean perfectos. Quiero los de aventuras, los de no hacer nada, los de reír hasta que duela la panza y también esos en los que solo hace falta un abrazo.</p>
+<p>Quiero escucharte, acompañarte y seguir descubriendo ese universo tan bonito que llevas dentro. Sin prisas, sin dejar de sorprenderme de ti.</p>
+<p>Y si alguna vez se te olvida lo especial que eres, vuelve aquí. En este pequeño rincón del océano siempre habrá una carta recordándotelo.</p>
+<div class="signature"><span class="hand">Con amor,<br>tu Bob Esponja ♡</span><small>ENTREGA ESPECIAL<br>SOLO PARA TI</small></div>
+</article><button class="pill" id="letter-continue" type="button">Seguir nuestra historia →</button></div></dialog>
+
+
+<dialog id="summary-dialog" aria-labelledby="summary-title"><div class="dialog-content summary-content"><button class="dialog-close" type="button" data-close aria-label="Cerrar recuerdo">×</button><p class="eyebrow">Para llevar este mar contigo</p><h2 id="summary-title">Nuestro recuerdo.</h2><p>Tu aventura, tus detalles favoritos y un océano de cariño en una imagen.</p><img id="summary-preview" alt="Resumen personalizado de nuestra aventura para Arenita" width="1080" height="1920" hidden><p id="summary-status" role="status">Preparando tu imagen…</p><button class="pill" id="download-summary" type="button" disabled>Descargar imagen ↓</button><button class="pill share-native" id="share-summary" type="button" hidden>Compartir la imagen ↗</button><a class="pill whatsapp-share" id="whatsapp-summary" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true">Descargar y abrir WhatsApp ♡</a><p class="share-instructions">Se descargará la imagen y se abrirá el chat de <strong>+52 618 205 1723</strong>. Adjunta la imagen descargada para enviarla.</p><button class="surprise-choice" id="retry-summary" type="button" hidden>Volver a crear mi imagen ↻</button></div></dialog>
+
+<div id="particles" aria-hidden="true"></div>
+<audio id="ambience" src="media/tema-bob-esponja.mp3" preload="none" loop></audio>
+<script src="memory-images.js" defer></script>
+<script src="summary.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
